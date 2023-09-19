@@ -31,7 +31,7 @@ public class ProductController {
     }
 
     @GetMapping("/findAllByName")
-    public DataResult<List<Product>> findAllByName(String productName){
+    public DataResult<List<Product>> findAllByName(@RequestParam("name") String productName){
         return productService.findAllByProductName(productName);
     }
 
@@ -41,17 +41,17 @@ public class ProductController {
     }
 
     @GetMapping("/findByCode")
-    public Result findByCode(String productCode){
+    public Result findByCode(@RequestParam("code") String productCode){
         return productService.findByProductCode(productCode);
     }
 
     @GetMapping("/findAllByBrand")
-    public Result findAllByBrand(String brand){
+    public Result findAllByBrand(@RequestParam("brand") String brand){
         return productService.findAllByBrand(brand);
     }
 
     @GetMapping("/findAllByPrice")
-    public Result findAllByPrice(double minPrice,double maxPrice){
+    public Result findAllByPrice(@RequestParam("minPrice") double minPrice,@RequestParam("maxPrice") double maxPrice){
         return productService.findAllByPriceBetween(minPrice,maxPrice);
     }
 
@@ -66,7 +66,7 @@ public class ProductController {
     }
 
     @PutMapping("/{id}/status")
-    public ResponseEntity<?> updateJobAdvertisementStatus(@PathVariable("id") Integer id, @RequestBody Boolean isActive) {
+    public ResponseEntity<?> updateProductStatus(@PathVariable("id") Integer id, @RequestBody Boolean isActive) {
         Result result = productService.updateProductStatus(id, isActive);
         return ResponseEntity.ok(result);
     }
