@@ -16,9 +16,9 @@ import org.springframework.util.DigestUtils;
 import sabancidx.productservice.business.concretes.CustomUserDetailsService;
 import sabancidx.productservice.security.AuthenticationFilter;
 
-@Configuration // klassın configürasyon klassı ilk proje ayağa kalkarken bu başlıcak
-@EnableWebSecurity // security yapmak için
-@EnableGlobalMethodSecurity( // buraya bak gereksiz ise kaldır
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(
         securedEnabled = true,
         jsr250Enabled = true,
         prePostEnabled = true

@@ -29,7 +29,7 @@ public class AuthenticationFilter extends OncePerRequestFilter {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthenticationFilter.class);
 
-    // her filterin içinde do filter var. filter çalışınca ilk buna girer
+    // her filterin içinde do filter var. filter çalışınca ilk buna girecek
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException, ServletException {
         Boolean unLogin = false;
