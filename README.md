@@ -1,5 +1,5 @@
 # productService
-this project is a product service project to optimization user and product relations with providing security.
+This project is a product service project to optimization user and product relations with providing security.
 
 
 Bu proje, ürün yönetimini kolaylaştırmak için geliştirilmiş bir RESTful API sunar. Kullanıcılar, ürünleri ekleyebilir, güncelleyebilir, silebilir ve arayabilirler. Her bir ürün, benzersiz bir kimlik numarasına sahiptir,
